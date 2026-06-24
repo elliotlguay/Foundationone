@@ -60,5 +60,5 @@ With an actual image:
 
 ## Contact
 
-- Phone: 289-995-2017
-- Email: info@foundationoneinc.com
+- Phone: 905-251-5678
+- Email: elliot.l.guay@gmail.com
