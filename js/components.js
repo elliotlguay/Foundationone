@@ -8,11 +8,7 @@ const NAV_HTML = `
   <div class="container">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
-        <div class="logo-mark"><span>F¹</span></div>
-        <div class="logo-text">
-          <strong>Foundation One</strong>
-          <small>Inc.</small>
-        </div>
+        <img src="assets/logo-transparent.png" alt="Foundation One Inc." class="navbar__logo-img" />
       </a>
       <div class="navbar__nav">
         <a href="index.html">Home</a>
@@ -48,11 +44,7 @@ const FOOTER_HTML = `
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="navbar__logo" style="margin-bottom:0;">
-          <div class="logo-mark"><span>F¹</span></div>
-          <div class="logo-text">
-            <strong>Foundation One</strong>
-            <small>Inc.</small>
-          </div>
+          <img src="assets/logo-transparent.png" alt="Foundation One Inc." class="navbar__logo-img footer__logo-img" />
         </a>
         <p>Professional exterior property maintenance and commercial hardscape services. Built for property managers, condominium corporations, and organizations that demand consistent, long-term results.</p>
       </div>
@@ -80,8 +72,8 @@ const FOOTER_HTML = `
       </div>
       <div class="footer__col">
         <h5>Contact</h5>
-        <div class="footer__contact-item">📞 <a href="tel:2899952017">289-995-2017</a></div>
-        <div class="footer__contact-item">✉️ <a href="mailto:info@foundationoneinc.com">info@foundationoneinc.com</a></div>
+        <div class="footer__contact-item">📞 <a href="tel:9052515678">(905)-251-5678</a></div>
+        <div class="footer__contact-item">✉️ <a href="mailto:elliot.l.guay@gmail.com">elliot.l.guay@gmail.com</a></div>
         <div class="footer__contact-item" style="margin-top:16px;">
           <div>
             <p style="color:rgba(255,255,255,0.4);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Hours</p>
