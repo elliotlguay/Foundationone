@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Before &amp; After Results — Foundation One Inc.</title>
+  <meta name="description" content="See the results of Foundation One's commercial property maintenance work. Before and after photos across interlock restoration, pressure washing, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .results-filter {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .filter-btn {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 100px;
+      border: 1.5px solid var(--gray-200);
+      color: var(--gray-600);
+      background: var(--white);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 36px;
+    }
+    .result-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .result-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .result-card__images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+    .result-img {
+      aspect-ratio: 4/3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+    }
+    .result-img--before {
+      background: linear-gradient(135deg, #c4c0b8 0%, #a8a49c 100%);
+    }
+    .result-img--after {
+      background: linear-gradient(135deg, #1E3050 0%, #0D1B2A 100%);
+    }
+    .result-img .label {
+      position: absolute;
+      top: 12px; left: 12px;
+      font-family: var(--font-display);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .result-img--before .label { background: rgba(0,0,0,0.45); color: var(--white); }
+    .result-img--after .label { background: var(--gold); color: var(--navy); }
+    .result-divider {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px; height: 36px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--navy);
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+    }
+    .result-card__info { padding: 24px; }
+    .result-card__category {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .result-card__info h4 { margin-bottom: 10px; }
+    .result-card__info p { font-size: 0.85rem; margin-bottom: 16px; }
+    .result-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-200);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__bg"></div>
+    <div class="container">
+      <div class="page-hero__inner">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> Before &amp; After Results
+        </div>
+        <span class="eyebrow">Project Results</span>
+        <h1>The Work Speaks for Itself</h1>
+        <p>Real results from commercial and managed properties across the Greater Toronto Area. Each project represents a surface restored, a liability addressed, and a property protected.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="results-filter reveal">
+        <button class="filter-btn active">All Projects</button>
+        <button class="filter-btn">Interlock Restoration</button>
+        <button class="filter-btn">Walkway Cleaning</button>
+        <button class="filter-btn">Polymeric Sanding</button>
+        <button class="filter-btn">Entranceway</button>
+        <button class="filter-btn">Courtyard</button>
+        <button class="filter-btn">Commercial Plaza</button>
+      </div>
+
+      <div class="results-grid">
+
+        <!-- Project 1 -->
+        <div class="result-card reveal reveal-delay-1">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1596394723269-b2cbca4e6313?w=500&q=75" alt="Before interlock restoration" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75" alt="After interlock restoration" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Interlock Restoration</div>
+            <h4>Condo Corporation — Common Walkway</h4>
+            <p>Full interlock re-leveling and polymeric re-sanding across 400m of common-area walkway. Eliminated trip hazards and dramatically improved curb appeal for residents.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Interlock Restoration</span>
+              <span class="ba-tag">Polymeric Sanding</span>
+              <span class="ba-tag">Weed Removal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="result-card reveal reveal-delay-2">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&q=75" alt="Before pressure washing" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=75" alt="After pressure washing" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Entranceway Refresh</div>
+            <h4>Commercial Plaza — Main Entranceway</h4>
+            <p>Complete pressure washing, interlock repair, and joint re-sanding across a multi-tenant commercial plaza's primary customer entrance.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Pressure Washing</span>
+              <span class="ba-tag">Interlock Repair</span>
+              <span class="ba-tag">Polymeric Sanding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="result-card reveal reveal-delay-3">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1597528380823-e9bfe7c9ef18?w=500&q=75" alt="Before courtyard restoration" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=500&q=75" alt="After courtyard restoration" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Courtyard Restoration</div>
+            <h4>Retirement Residence — Resident Courtyard</h4>
+            <p>Full interlock restoration of a heavily used resident courtyard. Addressed settling, drainage issues, and weed infiltration throughout the space.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Interlock Restoration</span>
+              <span class="ba-tag">Drainage</span>
+              <span class="ba-tag">Weed Treatment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="result-card reveal reveal-delay-1">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=500&q=75" alt="Before walkway cleaning" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?w=500&q=75" alt="After walkway cleaning" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Walkway Cleaning</div>
+            <h4>Office Complex — Perimeter Walkways</h4>
+            <p>Commercial pressure washing of all perimeter and courtyard walkways. Removed algae, staining, and years of surface contamination from high-traffic areas.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Pressure Washing</span>
+              <span class="ba-tag">Algae Removal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="result-card reveal reveal-delay-2">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&q=75" alt="Before polymeric sanding" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75&sat=-20" alt="After polymeric sanding" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Polymeric Sanding</div>
+            <h4>Property Management — Multi-Site Sanding Program</h4>
+            <p>Annual polymeric re-sanding across a portfolio of six managed condo properties. Systematic weed prevention and joint stabilization program.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Polymeric Sanding</span>
+              <span class="ba-tag">Multi-Site</span>
+              <span class="ba-tag">Annual Program</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="result-card reveal reveal-delay-3">
+          <div class="result-card__images">
+            <div class="result-img result-img--before">
+              <span class="label">Before</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&q=75" alt="Before plaza restoration" loading="lazy" />
+            </div>
+            <div class="result-img result-img--after">
+              <span class="label">After</span>
+              <img class="result-photo" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=75" alt="After plaza restoration" loading="lazy" />
+            </div>
+            <div class="result-divider">→</div>
+          </div>
+          <div class="result-card__info">
+            <div class="result-card__category">Commercial Plaza</div>
+            <h4>Retail Plaza — Full Exterior Restoration</h4>
+            <p>Comprehensive exterior restoration for a 12-unit retail plaza: pressure washing, interlock repair, weed removal, and new polymeric sanding throughout.</p>
+            <div class="result-card__meta">
+              <span class="ba-tag">Full Restoration</span>
+              <span class="ba-tag">Pressure Washing</span>
+              <span class="ba-tag">Interlock</span>
+              <span class="ba-tag">Polymeric Sand</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:var(--off-white); border-radius:var(--radius-lg); padding:48px; text-align:center; margin-top:64px;" class="reveal">
+        <span class="eyebrow">Add Your Photos</span>
+        <h3 style="margin-bottom:12px;">Replace Placeholders with Real Project Photos</h3>
+        <p style="max-width:500px; margin:0 auto;">Upload before/after images directly to each project card to bring this gallery to life. Contact info@foundationoneinc.com for content update support.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__inner">
+        <div>
+          <h2>Ready to See These Results at Your Property?</h2>
+          <p>Request a property assessment and see what Foundation One can do for your exterior spaces.</p>
+        </div>
+        <a href="contact.html" class="btn btn-dark">Request Property Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
