@@ -1211,6 +1211,9 @@ p  { color: var(--gray-600); }
   width: auto;
   display: block;
   transition: opacity 0.2s ease;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
 }
 .navbar__logo-img:hover { opacity: 0.85; }
 
@@ -1218,4 +1221,7 @@ p  { color: var(--gray-600); }
 .footer__logo-img {
   height: 120px;
   margin-bottom: 16px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
 }

@@ -73,7 +73,7 @@ const FOOTER_HTML = `
       <div class="footer__col">
         <h5>Contact</h5>
         <div class="footer__contact-item">📞 <a href="tel:9052515678">(905)-251-5678</a></div>
-        <div class="footer__contact-item">✉️ <a href="mailto:elliot.l.guay@gmail.com">elliot.l.guay@gmail.com</a></div>
+        <div class="footer__contact-item">✉️ <a href="mailto:foundationoneinc@gmail.com">foundationoneinc@gmail.com</a></div>
         <div class="footer__contact-item" style="margin-top:16px;">
           <div>
             <p style="color:rgba(255,255,255,0.4);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Hours</p>

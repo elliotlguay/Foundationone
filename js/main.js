@@ -65,16 +65,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  /* ── Form submission placeholder ── */
+  /* ── Form submission via Formspree ── */
   const form = document.querySelector('.contact-form form');
   if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Message Sent — We\'ll Be In Touch';
-      btn.style.background = '#2a6049';
-      btn.style.color = '#fff';
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
       btn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          btn.textContent = '✓ Message Sent — We\'ll Be In Touch!';
+          btn.style.background = '#2a6049';
+          btn.style.color = '#fff';
+          form.reset();
+        } else {
+          btn.textContent = 'Error — Please Try Again';
+          btn.style.background = '#c0392b';
+          btn.style.color = '#fff';
+          btn.disabled = false;
+        }
+      } catch (err) {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     });
   }
 
